@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a08ae5"
+    android:padding="10dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/act_lista_contatos_ed_nome_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        app:hintEnabled="true"
+        android:background="@drawable/input_field_background"
+        android:padding="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/act_lista_contatos_ed_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:hint="Pesquisar por nome..."
+            android:textColor="#000000"
+            android:textColorHint="#9E9E9E" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/act_lista_contatos_rv_itens"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/act_lista_contatos_ed_nome_layout"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        tools:listitem="@layout/adp_contato" />
+
+    <Button
+        android:id="@+id/act_lista_contatos_bt_adicionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_arredondado"
+        android:text="+"
+        android:textColor="#5B770C"
+        android:textSize="34sp" />
+
+</RelativeLayout>
